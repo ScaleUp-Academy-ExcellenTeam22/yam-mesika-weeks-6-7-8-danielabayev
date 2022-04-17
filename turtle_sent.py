@@ -32,6 +32,7 @@ def show_example():
     print(post_office.read_inbox('Daniel', 1))
     print(post_office.read_inbox('Daniel', 1))
     print(post_office.read_inbox('Daniel', 1))
+    print(post_office.search_inbox('Daniel', "e"))
 
 
 if __name__ == "__main__":

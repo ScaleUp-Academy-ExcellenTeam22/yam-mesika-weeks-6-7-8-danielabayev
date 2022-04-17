@@ -73,3 +73,11 @@ class PostOffice:
                 mail_to_add_number = mail_to_add_number + 1
             mail_number_in_user_box = mail_number_in_user_box + 1
         return return_box
+
+    def search_inbox(self, user_name: str, string: str) -> list:
+        messages_with_the_string = []
+        user_box = self.boxes[user_name]
+        for mail in user_box:
+            if string in mail["body"]:
+                messages_with_the_string.append(mail)
+        return messages_with_the_string
