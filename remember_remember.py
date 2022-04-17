@@ -16,4 +16,3 @@ def read_photo_message(file_path: str):
 
 if __name__ == "__main__":
     read_photo_message(r"{path}".format(path=input("insert file path")))
-    # C:\Users\dan52\PycharmProjects\pythonWeeks6 - 7 - 8\code.png
