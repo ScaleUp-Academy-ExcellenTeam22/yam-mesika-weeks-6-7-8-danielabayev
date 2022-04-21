@@ -10,14 +10,13 @@ def group_by(function: Optional[callable], iterable: Iterable) -> dict:
     :param iterable: Items to run the function on.
     :return: Dictionary base on the results of the function and the iterable.
     """
-    # return_dict = {}
-    # for item in iterable:
-    #     if function(item) in return_dict.keys():
-    #         return_dict[function(item)].append(item)
-    #     else:
-    #         return_dict[function(item)] = item
-    return {function(item): item for item in iterable}
-    # return return_dict
+    return_dict = {}
+    for item in iterable:
+        if function(item) in return_dict.keys():
+            return_dict[function(item)].extend([item])
+        else:
+            return_dict[function(item)] = [item]
+    return return_dict
 
 
 if __name__ == "__main__":
