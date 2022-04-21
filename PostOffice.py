@@ -75,6 +75,12 @@ class PostOffice:
         return return_box
 
     def search_inbox(self, user_name: str, string: str) -> list:
+        """
+        This function returns all the messages of the user with the given string.
+        :param user_name: The username of the user.
+        :param string: The string to search.
+        :return: All the messages with the wanted string.
+        """
         messages_with_the_string = []
         user_box = self.boxes[user_name]
         for mail in user_box:
